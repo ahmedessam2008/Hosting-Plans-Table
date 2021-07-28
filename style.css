@@ -1,0 +1,134 @@
+/* Global Prop  */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --mainColor: #fc5103;
+}
+body {
+  font-family: sans-serif;
+  /* height: 100vh; */
+  padding: 20px 0;
+}
+.details,
+.basic,
+.standard,
+.premium,
+.professional {
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  border-right: 1px solid#eee;
+}
+h2 {
+  font-size: 60px;
+  font-weight: 500;
+  color: #fc5103;
+  display: inline;
+  position: relative;
+}
+h2:before {
+  all: initial;
+  content: "$";
+  position: absolute;
+  top: 12px;
+  left: -11px;
+  font-size: 18px;
+  color: #5f5d5d;
+  font-weight: bold;
+}
+h2::after {
+  all: initial;
+  content: "99";
+  position: absolute;
+  top: 14px;
+  right: -28px;
+
+  font-size: 18px;
+  color: #5f5d5d;
+  font-weight: bold;
+}
+h3 {
+  background-color: var(--mainColor);
+  font-weight: normal;
+  color: #fff;
+  font-size: 18px;
+}
+h3,
+p {
+  width: 100%;
+  height: 9%;
+  padding: 20px;
+  text-align: center;
+}
+p:nth-of-type(odd) {
+  background-color: #f7f7f7;
+}
+.info span {
+  color: #9d9999;
+  align-self: normal;
+}
+.iconify {
+  color: #1d1d1d;
+  font-weight: bolder;
+  font-size: 23px;
+}
+.container {
+  width: 1000px;
+  display: flex;
+  flex-flow: row wrap;
+  /* height: 550px; */
+  background-color: #fafafa;
+  margin: 20px auto;
+}
+.container .details {
+  flex-basis: calc((100%) / 6);
+}
+.container .details p {
+  color: #a6a6a6;
+}
+.info {
+  height: 15%;
+  padding: 65px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .basic {
+  flex-basis: calc((100%) / 4.8);
+}
+.container .standard {
+  flex-basis: calc((100%) / 4.8);
+}
+.container .premium {
+  flex-basis: calc((100%) / 4.8);
+}
+.container .professional {
+  flex-basis: calc((100%) / 4.8);
+}
+.order {
+  background-color: #111;
+  color: #fff;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  width: 40%;
+  height: 5%;
+  margin-top: 19px;
+  line-height: 3px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+.order:hover {
+  background-color: #fc5103;
+}
